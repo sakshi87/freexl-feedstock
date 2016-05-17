@@ -5,7 +5,7 @@ Home: https://www.gaia-gis.it/fossil/freexl/index
 
 Package license: LGPL-2.1
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Extract valid data from within an Excel
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/freexl-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/freexl-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/freexl-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/freexl-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/freexl-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/freexl-feedstock/branch/master)
