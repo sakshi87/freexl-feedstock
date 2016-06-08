@@ -8,11 +8,26 @@ source:
     fn: freexl-{{ version }}.tar.gz
     url: http://www.gaia-gis.it/gaia-sins/freexl-{{ version }}.tar.gz
     md5: 9954640e5fed76a5d9deb9b02b0169a0
+    patches:
+        - makefile.vc.patch  # [win]
+        - nmake.opt.patch  # [win]
+        - freexl.c.patch  # [win]
 
 build:
-    number: 0
-    skip: True  # [win]
+    number: 1
+    features:
+        - vc9  # [win and py27]
+        - vc10  # [win and py34]
+        - vc14  # [win and py35]  
 
+requirements:
+    build:
+        - python  # [win]
+        - libiconv
+        
+    run:
+        - libiconv
+        
 test:
     commands:
         - test -f ${PREFIX}/lib/libfreexl.a  # [unix]
