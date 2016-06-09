@@ -31,8 +31,6 @@ requirements:
 test:
     commands:
         - test -f ${PREFIX}/lib/libfreexl.a  # [unix]
-        - test -f ${PREFIX}/lib/libfreexl.so  # [linux]
-        - test -f ${PREFIX}/lib/libfreexl.dylib  # [osx]
         - conda inspect linkages -n _test freexl  # [linux]
 
 about:
