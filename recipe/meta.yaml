@@ -1,43 +1,50 @@
 {% set version = "1.0.2" %}
 
 package:
-    name: freexl
-    version: {{ version }}
+  name: freexl
+  version: {{ version }}
 
 source:
-    fn: freexl-{{ version }}.tar.gz
-    url: http://www.gaia-gis.it/gaia-sins/freexl-{{ version }}.tar.gz
-    md5: 9954640e5fed76a5d9deb9b02b0169a0
-    patches:
-        - makefile.vc.patch  # [win]
-        - nmake.opt.patch  # [win]
-        - freexl.c.patch  # [win]
+  url: http://www.gaia-gis.it/gaia-sins/freexl-{{ version }}.tar.gz
+  sha256: b39a4814a0f53f5e09a9192c41e3e51bd658843f770399023a963eb064f6409d
+  patches:
+    - makefile.vc.patch  # [win]
+    - nmake.opt.patch  # [win]
+    - freexl.c.patch  # [win]
 
 build:
-    number: 1
-    features:
-        - vc9  # [win and py27]
-        - vc10  # [win and py34]
-        - vc14  # [win and py35]  
+  number: 2
+  skip: True  # [win and py36]
+  features:
+    - vc9  # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and (py35 or py36)]
 
 requirements:
-    build:
-        - python  # [win]
-        - libiconv
-        
-    run:
-        - libiconv
-        
+  build:
+    - python  # [win]
+    - libiconv
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and (py35 or py36)]
+  run:
+    - libiconv
+    - vc 9  # [win and py27]
+    - vc 10  # [win and py34]
+    - vc 14  # [win and (py35 or py36)]
+
 test:
-    commands:
-        - test -f ${PREFIX}/lib/libfreexl.a  # [unix]
-        - conda inspect linkages -p ${PREFIX} freexl  # [linux]
+  commands:
+    - test -f ${PREFIX}/lib/libfreexl.a  # [unix]
+    - conda inspect linkages -p ${PREFIX} freexl  # [linux]
+    - conda inspect objects -p $PREFIX freexl  # [osx]
 
 about:
-    home: https://www.gaia-gis.it/fossil/freexl/index
-    license: LGPL-2.1
-    summary: Extract valid data from within an Excel
+  home: https://www.gaia-gis.it/fossil/freexl/index
+  license: LGPL-2.1
+  license_file: COPYING
+  summary: 'Extract valid data from within an Excel'
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
+  recipe-maintainers:
+    - ocefpaf
