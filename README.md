@@ -14,14 +14,16 @@ Summary: Extract valid data from within an Excel
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/freexl-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/freexl-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/freexl-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/freexl-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/freexl-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/freexl-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/freexl-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/freexl-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/freexl-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/freexl-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/freexl-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/freexl-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/freexl/badges/version.svg)](https://anaconda.org/conda-forge/freexl)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/freexl/badges/downloads.svg)](https://anaconda.org/conda-forge/freexl)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-freexl-green.svg)](https://anaconda.org/conda-forge/freexl) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/freexl.svg)](https://anaconda.org/conda-forge/freexl) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/freexl.svg)](https://anaconda.org/conda-forge/freexl) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/freexl.svg)](https://anaconda.org/conda-forge/freexl) |
 
 Installing freexl
 =================
