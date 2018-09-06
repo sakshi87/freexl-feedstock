@@ -13,7 +13,7 @@ source:
     - freexl.c.patch  # [win]
 
 build:
-  number: 2
+  number: 1002
   run_exports:
     - {{ pin_subpackage('freexl') }}
 
